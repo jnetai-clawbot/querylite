@@ -130,7 +130,7 @@ fun SchemaScreen(
 
                                 if (isExpanded) {
                                     Spacer(modifier = Modifier.height(10.dp))
-                                    HorizontalDivider(color = DarkBorder)
+                                    Divider(color = DarkBorder)
                                     Spacer(modifier = Modifier.height(10.dp))
 
                                     // Column details

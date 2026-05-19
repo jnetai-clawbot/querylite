@@ -171,7 +171,7 @@ fun QueryScreen(
                                         )
                                     }
                                 }
-                                HorizontalDivider(color = DarkBorder.copy(alpha = 0.3f))
+                                Divider(color = DarkBorder.copy(alpha = 0.3f))
                             }
                         }
 

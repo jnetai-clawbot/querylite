@@ -197,7 +197,7 @@ fun DiffScreen(
 
                         if (isExpanded) {
                             Spacer(modifier = Modifier.height(10.dp))
-                            HorizontalDivider(color = DarkBorder)
+                            Divider(color = DarkBorder)
                             Spacer(modifier = Modifier.height(8.dp))
 
                             if (result.addedRows.isNotEmpty()) {
