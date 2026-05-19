@@ -1,0 +1,25 @@
+=== QueryLite Changes Log ===
+
+2024-01-01: v1.0.0 - Initial project creation
+- Created complete project structure with Gradle 8.5, Kotlin 1.9.22, AGP 8.2.2
+- Added Room 2.6.1 + KSP for internal database
+- Implemented dark Material Design 3 theme with amber/yellow neon colors (Color.kt, Theme.kt)
+- Built reusable UI components: GlowButton, NeonCard, SectionHeader, EmptyState, StatusBadge, DataGrid, SqlEditor
+- Created HomeScreen with file picker, new DB creation, saved databases list
+- Created BrowserScreen with table tabs and data grid viewer
+- Created QueryScreen with SQL syntax highlighting editor, query history, run/clear buttons
+- Created SchemaScreen with expandable table schemas, column details, index viewer
+- Created DiffScreen with two-db comparison, file pickers, add/remove/change diff results
+- Created ImportExportScreen with CSV import (with auto-create table) and export
+- Created SettingsScreen with About, Version, Check For Updates, Share, Feedback, links to jnetaol.com
+- Implemented DatabaseEngine using android.database.sqlite for open/query/schema
+- Implemented CsvHandler for CSV import/export with proper quoting
+- Implemented DiffEngine for comparing two DB tables
+- Added DebugLogger with file-based persistent logging and error codes (QL-xxx)
+- Created Room entities (QueryHistory, SavedDatabase) with DAOs
+- Added AppViewModel with full state management
+- Created MainApp with bottom navigation (Home, Browser, Query, Diff, Settings)
+- Added AndroidManifest with file picker intent filters and storage permissions
+- Created adaptive icon with database/SQL-themed launcher graphics
+- Added GitHub Actions: build-debug.yml for debug APK on push, build-release.yml for signed release on tags
+- Added LICENSE (MIT), README.md, CHANGELOG.md, .gitignore
