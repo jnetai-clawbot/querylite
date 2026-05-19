@@ -2,28 +2,28 @@ package com.jnetaol.querylite.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.ColumnInfo
+import androidx.room.ColumnInfo as RoomColumnInfo
 
 @Entity(tableName = "query_history")
 data class QueryHistory(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    @ColumnInfo(name = "sql_text") val sqlText: String,
-    @ColumnInfo(name = "database_path") val databasePath: String,
-    @ColumnInfo(name = "executed_at") val executedAt: Long = System.currentTimeMillis(),
-    @ColumnInfo(name = "is_favorite") val isFavorite: Boolean = false,
-    @ColumnInfo(name = "execution_time_ms") val executionTimeMs: Long = 0,
-    @ColumnInfo(name = "row_count") val rowCount: Int = 0
+    @RoomColumnInfo(name = "sql_text") val sqlText: String,
+    @RoomColumnInfo(name = "database_path") val databasePath: String,
+    @RoomColumnInfo(name = "executed_at") val executedAt: Long = System.currentTimeMillis(),
+    @RoomColumnInfo(name = "is_favorite") val isFavorite: Boolean = false,
+    @RoomColumnInfo(name = "execution_time_ms") val executionTimeMs: Long = 0,
+    @RoomColumnInfo(name = "row_count") val rowCount: Int = 0
 )
 
 @Entity(tableName = "saved_databases")
 data class SavedDatabase(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    @ColumnInfo(name = "display_name") val displayName: String,
-    @ColumnInfo(name = "file_path") val filePath: String,
-    @ColumnInfo(name = "added_at") val addedAt: Long = System.currentTimeMillis(),
-    @ColumnInfo(name = "last_opened_at") val lastOpenedAt: Long = System.currentTimeMillis(),
-    @ColumnInfo(name = "table_count") val tableCount: Int = 0,
-    @ColumnInfo(name = "file_size_bytes") val fileSizeBytes: Long = 0
+    @RoomColumnInfo(name = "display_name") val displayName: String,
+    @RoomColumnInfo(name = "file_path") val filePath: String,
+    @RoomColumnInfo(name = "added_at") val addedAt: Long = System.currentTimeMillis(),
+    @RoomColumnInfo(name = "last_opened_at") val lastOpenedAt: Long = System.currentTimeMillis(),
+    @RoomColumnInfo(name = "table_count") val tableCount: Int = 0,
+    @RoomColumnInfo(name = "file_size_bytes") val fileSizeBytes: Long = 0
 )
 
 data class TableInfo(

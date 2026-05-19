@@ -171,7 +171,7 @@ fun SchemaScreen(
                                     val tableIndexes = indexes.filter { it.tableName == tableInfo.name }
                                     if (tableIndexes.isNotEmpty()) {
                                         Spacer(modifier = Modifier.height(8.dp))
-                                        HorizontalDivider(color = DarkBorder.copy(alpha = 0.5f))
+                                        Divider(color = DarkBorder.copy(alpha = 0.5f))
                                         Spacer(modifier = Modifier.height(8.dp))
                                         Text("Indexes", color = NeonAmberLight, fontSize = 12.sp, fontWeight = FontWeight.Bold)
                                         tableIndexes.forEach { idx ->

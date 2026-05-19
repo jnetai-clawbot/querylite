@@ -33,6 +33,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -329,9 +330,10 @@ private fun buildHighlightedSql(text: String) = buildAnnotatedString {
     val words = Regex("""('[^']*'|"[^"]*"|--[^\n]*|/\*[\s\S]*?\*/|\b\w+\b|[^\w\s])""")
     val matches = words.findAll(text)
 
+    var lastIndex = 0
+
     for (match in matches) {
         val token = match.value
-        val startIndex = match.range.first
 
         append(text, start = lastIndex, end = match.range.first)
 
@@ -348,5 +350,10 @@ private fun buildHighlightedSql(text: String) = buildAnnotatedString {
         withStyle(style) {
             append(token)
         }
+        lastIndex = match.range.last + 1
+    }
+
+    if (lastIndex < text.length) {
+        append(text, start = lastIndex, end = text.length)
     }
 }
