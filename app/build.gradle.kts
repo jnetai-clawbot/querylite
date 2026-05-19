@@ -26,10 +26,10 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("querylite-keystore.jks")
-            storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "android"
-            keyAlias = "querylite"
-            keyPassword = System.getenv("KEY_PASSWORD") ?: "android"
+            storeFile = rootProject.file("keystore.jks")
+            storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "changeit"
+            keyAlias = System.getenv("KEY_ALIAS") ?: "querylite"
+            keyPassword = System.getenv("KEY_PASSWORD") ?: "changeit"
         }
     }
 
