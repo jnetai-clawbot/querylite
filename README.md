@@ -22,4 +22,4 @@ A powerful, dark-themed SQLite database management tool built with Jetpack Compo
 - Room Database for query history and saved connections
 - Min SDK 29, Target SDK 34, ARM64
 
-## Made by jnetaol.com
+## Made by jnetai.com

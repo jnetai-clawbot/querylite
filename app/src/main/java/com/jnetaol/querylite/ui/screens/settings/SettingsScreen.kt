@@ -73,12 +73,12 @@ fun SettingsScreen(
                         Spacer(modifier = Modifier.height(12.dp))
 
                         Text(
-                            "Made By jnetaol.com",
+                            "Made By jnetai.com",
                             color = AccentPrimary,
                             fontSize = 13.sp,
                             fontWeight = FontWeight.Medium,
                             modifier = Modifier.clickable {
-                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://jnetaol.com"))
+                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://jnetai.com"))
                                 context.startActivity(intent)
                             }
                         )
@@ -95,7 +95,7 @@ fun SettingsScreen(
                         title = "Check For Updates",
                         subtitle = "Version $versionName",
                         onClick = {
-                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://jnetaol.com/querylite"))
+                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://jnetai.com/querylite"))
                             context.startActivity(intent)
                         }
                     )
@@ -111,7 +111,7 @@ fun SettingsScreen(
                         onClick = {
                             val shareIntent = Intent(Intent.ACTION_SEND).apply {
                                 type = "text/plain"
-                                putExtra(Intent.EXTRA_TEXT, "Check out QueryLite - a powerful SQLite Database Browser for Android!\nhttps://jnetaol.com/querylite")
+                                putExtra(Intent.EXTRA_TEXT, "Check out QueryLite - a powerful SQLite Database Browser for Android!\nhttps://jnetai.com/querylite")
                             }
                             context.startActivity(Intent.createChooser(shareIntent, "Share QueryLite"))
                         }
@@ -127,7 +127,7 @@ fun SettingsScreen(
                         subtitle = "Send your suggestions and bug reports",
                         onClick = {
                             val intent = Intent(Intent.ACTION_SENDTO).apply {
-                                data = Uri.parse("mailto:hello@jnetaol.com")
+                                data = Uri.parse("mailto:hello@jnetai.com")
                                 putExtra(Intent.EXTRA_SUBJECT, "QueryLite Feedback")
                             }
                             context.startActivity(intent)
@@ -143,7 +143,7 @@ fun SettingsScreen(
                         title = "Open Source Licenses",
                         subtitle = "View third-party library licenses",
                         onClick = {
-                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://jnetaol.com/querylite/licenses"))
+                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://jnetai.com/querylite/licenses"))
                             context.startActivity(intent)
                         }
                     )
@@ -157,7 +157,7 @@ fun SettingsScreen(
                         title = "Privacy Policy",
                         subtitle = "How we handle your data",
                         onClick = {
-                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://jnetaol.com/privacy"))
+                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://jnetai.com/privacy"))
                             context.startActivity(intent)
                         }
                     )
@@ -181,7 +181,7 @@ fun SettingsScreen(
             item {
                 Spacer(modifier = Modifier.height(12.dp))
                 Text(
-                    "QueryLite © ${java.util.Calendar.getInstance().get(java.util.Calendar.YEAR)} jnetaol.com",
+                    "QueryLite © ${java.util.Calendar.getInstance().get(java.util.Calendar.YEAR)} jnetai.com",
                     color = TextDisabled,
                     fontSize = 11.sp,
                     textAlign = TextAlign.Center,
